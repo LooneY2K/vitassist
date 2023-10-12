@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cab Sharing</title>
+    <link rel="stylesheet" type="text/css" href="../styles/cab.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="../Pictures/Asset 3.png">
+        <nav id="navbar">
+            <ul>
+                <li class="item"><a href="./file.html">Home</a></li>
+                <li class="item"><a href="./items.html" target="_blank">MarketPlace</a></li>
+                <li class="item"><a href="#">Cab Sharing</a></li>
+                <li class="item"><a href="./accomodation.html" target="_blank">Accommodation</a></li>
+                <li class="item"><a href=".about"></a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        
+        <section id="cab-form">
+            <h2>Add a Cab Sharing Listing</h2>
+            <form id="add-cab-form">
+                <input type="text" name="from" placeholder="From"  required="required">
+                <input type="text" name="to" placeholder="To"  required="required">
+                <input type="date" name="date" placeholder="Date"  required="required">
+                <input type="number" name="totalSeats" placeholder="Total Seats"  required="required">
+                <input type="number" name="seatsToShare" placeholder="Seats to Share"  required="required">
+                <input type="number" name="price" placeholder="Price per Seat"  required="required">
+                <button type="submit">Submit Cab Listing</button>
+            </form>
+        </section>
+        <section id="listings">
+        </section>
+    </main>
+    <script src="./cab.js"></script>
+</body>
+</html>
