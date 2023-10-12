@@ -10,6 +10,7 @@
 }
 body {
   min-height: 100vh;
+  min-width: 100vh;
   place-items: center;
   line-height: 1.6;
   background: white;
@@ -21,6 +22,7 @@ body {
   background-color: white;
   border: 2px solid black;
   border-radius: 50px;
+  min-height: 100px;
 }
 img {
   width: 120px;
@@ -39,9 +41,9 @@ img {
 }
 #navbar ul li a {
   display: block;
-  font-size: 1.3rem;
+  font-size: 3vh;
   font-weight: bold;
-  padding: 10px;
+  padding: 1.2vh;
   border-radius: 20px;
   color: black;
   text-decoration: none;
@@ -51,6 +53,7 @@ img {
 }
 .container {
   display: flex;
+  flex-wrap: wrap;
   padding: 80px;
   justify-content: space-around;
   width: 100%;
@@ -58,7 +61,7 @@ img {
 
 .card {
   color: var(--clr-neutral-100);
-
+  margin-bottom: 10px;
   padding: 10rem 0 0;
   max-width: 35ch;
   border-radius: 1rem;
