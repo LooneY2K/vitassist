@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Marketplace</title>
+    <link rel="stylesheet" type="text/css" href="./styles/items.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="./Pictures/Asset 3.png">
+        <nav id="navbar">
+            <ul>
+                <li class="item"><a href="./file.html">Home</a></li>
+                <li class="item"><a href="#">MarketPlace</a></li>
+                <li class="item"><a href="./cab.html" target="_blank">Cab Sharing</a></li>
+                <li class="item"><a href="./accomodation.html" target="_blank">Accommodation</a></li>
+                <li class="item"><a href=".about"></a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="Items-Form">
+            <h2>Add an Item Listing</h2>
+            <form id="add-items-form">
+                <label for="name">Item Name:</label>
+                <input type="text" name="name" id="name" placeholder="Item Name"  required="required">
+        
+                <label for="condition">Condition:</label>
+                <input type="text" name="condition" id="condition" placeholder="Condition"  required="required">
+        
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="price" placeholder="Price"  required="required">
+        
+                <button type="submit">Submit Item Listing</button>
+            </form>
+        </section>
+
+<section id="listings">
+    <!-- Listings for cab sharing, accommodation, and items will be displayed here -->
+</section>
+</main>
+<script src="./items.js"></script>
+</body>
+</html>

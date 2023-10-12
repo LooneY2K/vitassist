@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accomodation</title>
+    <link rel="stylesheet" type="text/css" href="./styles/accomodation.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="./Pictures/Asset 3.png">
+        <nav id="navbar">
+            <ul>
+                <li class="item"><a href="./file.html">Home</a></li>
+                <li class="item"><a href="./items.html" target="_blank">MarketPlace</a></li>
+                <li class="item"><a href="./cab.html" target="_blank">Cab Sharing</a></li>
+                <li class="item"><a href="#" >Accommodation</a></li>
+                <li class="item"><a href=".about"></a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="accommodation-form">
+            <h2>Add an Accommodation Sharing Listing</h2>
+            <form id="add-accommodation-form">
+                <input type="text" name="location" placeholder="Location"  required="required">
+                <input type="date" name="availableFrom" placeholder="Available From"  required="required">
+                <input type="number" name="totalRooms" placeholder="Total Rooms"  required="required">
+                <input type="number" name="roomsToShare" placeholder="Rooms to Share"  required="required">
+                <input type="number" name="price" placeholder="Price per Room"  required="required">
+                <button type="submit">Submit Accommodation Listing</button>
+            </form>
+        </section>
+        <section id="listings">
+            <!-- Listings for accommodation  will be displayed here -->
+        </section>
+    </main>
+    <script src="./accomodation.js"></script>
+</body>
+</html>

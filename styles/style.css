@@ -1,0 +1,161 @@
+:root {
+  --clr-neutral-900: hsl(207, 19%, 19%);
+  --clr-neutral-100: hsl(0, 100%, 100%);
+  --clr-accent-400: hsl(142 90% 61%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  background: white;
+  font-family: sans-serif;
+}
+.navbar {
+  display: flex;
+  max-height: 80px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+img {
+  width: 120px;
+  padding: 10px;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+}
+#navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+#navbar ul li a {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  scale: 1.2;
+}
+.container {
+  display: flex;
+  padding: 80px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card {
+  color: var(--clr-neutral-100);
+
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+.card:hover,
+.card:focus-within {
+  transform: scale(1.1);
+}
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% /0),
+    hsl(20 0% 0% /0.4) 20%,
+    hsl(0 0% 0% /1)
+  );
+}
+
+.cardtitle::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: calc(100% + var(--padding));
+  background: var(--clr-accent-400);
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+.card:hover .cardtitle::after,
+.card:focus-within .cardtitle::after {
+  transform: scaleX(1);
+}
+.cardbody {
+  color: rgb(255, 255, 255/0.8);
+}
+.cardtitle {
+  position: relative;
+  width: max-content;
+}
+@media (hover) {
+  .card-content {
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+  .card-content > *:not(.cardtitle) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .card:hover .card-content > *:not(.cardtitle),
+  .card:focus-within .card-content > *:not(.cardtitle) {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+  .cardtitle::after {
+    transform: scaleX(0);
+  }
+}
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(207, 19%, 19%);
+  background-color: var(--clr-accent-400);
+  padding: 0.5em 1.25em;
+  border-radius: 0.25rem;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--clr-neutral-100);
+}
+#card1 {
+  background-image: url(../Pictures/market.jpeg);
+  background-size: contain;
+}
+#card2 {
+  background-image: url(../Pictures/download.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#card3 {
+  background-image: url(../Pictures/hotel.jpeg);
+  background-size: cover;
+}
+.about {
+  text-align: center;
+
+  padding: 20px;
+}
